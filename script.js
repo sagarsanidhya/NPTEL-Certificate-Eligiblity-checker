@@ -28,7 +28,7 @@ formEl.addEventListener("submit", (e) => {
     .filter(v => !isNaN(v));
   const examScore = parseFloat(document.getElementById("examScore").value);
 
-  const bestMap = { 4: 3, 6: 4, 12: 8 };
+  const bestMap = { 4: 3, 8: 4, 12: 8 };
   if (!bestMap[duration] || scores.length !== duration || isNaN(examScore)) {
     resultEl.textContent = "Please fill all fields correctly.";
     resultEl.classList.add("text-red-500");
