@@ -1,0 +1,44 @@
+/* Transition for dark/light mode */
+html, body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+}
+
+.dark body {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+}
+
+.dark .bg-white {
+  background-color: #3b3b3b;
+}
+
+.dark .text-gray-900 {
+  color: #e0e0e0;
+}
+
+.dark .bg-blue-600 {
+  background-color: #1e3a8a;
+}
+
+.dark input,
+.dark select {
+  background-color: #555;
+  color: #fff;
+  border: 1px solid #888;
+}
+
+.dark label {
+  color: #d1d5db;
+}
+
+.dark input:focus,
+.dark select:focus {
+  border-color: #63a7ff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(99, 167, 255, 0.5);
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" class="transition-all">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NPTEL Certificate Eligibility Checker</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-D+t/xYhT4LMYPJjVCJ5Vmc1S59BzvwzNmv8eZbOXU6mwUsU8Wz5+Cvz/ulFQ+ljXx8/7U7hZT72+HtLmohXr6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body class="transition-all bg-white text-gray-900">
+
+  <div class="flex justify-center items-center min-h-screen">
+    <div class="relative container mx-auto p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md w-full max-w-3xl">
+
+      <!-- Toggle inside container -->
+      <div class="absolute top-4 right-4">
+        <button id="themeToggle" class="bg-gray-200 dark:bg-gray-600 p-2 rounded-full text-gray-800 dark:text-white">
+          <i id="themeIcon" class="fas fa-sun text-xl"></i>
+        </button>
+      </div>
+
+      <h1 class="text-3xl font-bold mb-6 text-center text-gray-900 dark:text-white">
+        NPTEL Certificate Eligibility Checker
+      </h1>
+
+      <form id="checkerForm">
+        <div class="mb-4">
+          <label for="duration" class="block font-medium">Course Duration (in weeks)</label>
+          <select id="duration" class="w-full border rounded px-3 py-2 dark:bg-gray-700 dark:text-white">
+            <option value="4">4 weeks</option>
+            <option value="6">6 weeks</option>
+            <option value="12">12 weeks</option>
+          </select>
+        </div>
+
+        <div id="assignmentInputs" class="mb-4"></div>
+
+        <div class="mb-4">
+          <label for="examScore" class="block font-medium">Expected Exam Score (out of 100)</label>
+          <input type="number" id="examScore" class="w-full border rounded px-3 py-2 dark:bg-gray-700 dark:text-white" max="100" min="0" required>
+        </div>
+
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded dark:bg-blue-700">Check Eligibility</button>
+      </form>
+
+      <div id="result" class="mt-6 text-lg font-medium text-gray-900 dark:text-white"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
